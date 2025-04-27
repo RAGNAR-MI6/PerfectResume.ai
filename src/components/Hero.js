@@ -49,15 +49,11 @@ const Hero = () => {
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-lg">Resume Preview Image</div>
-          {/* In a real implementation, replace with: 
-          <Image
-            src="/images/resume-preview.png"
-            alt="Resume Preview"
-            width={1000}
-            height={1000}
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          /> */}
+          <img
+            src="/images/templates/professional-template.svg"
+            alt="Professional Resume Template"
+            className="h-56 w-full object-contain sm:h-72 md:h-96 lg:w-full lg:h-full p-4"
+          />
         </div>
       </div>
     </div>

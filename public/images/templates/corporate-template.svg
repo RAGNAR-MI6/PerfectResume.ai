@@ -1,0 +1,35 @@
+<svg width="600" height="800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="600" height="800" fill="#ffffff" />
+    
+    <!-- Header -->
+    <rect width="600" height="150" fill="#34495e" />
+    
+    <!-- Profile photo placeholder -->
+    <circle cx="100" cy="75" r="50" fill="#95a5a6" />
+    
+    <!-- Name placeholder -->
+    <rect x="170" y="50" width="350" height="25" fill="#ffffff" />
+    
+    <!-- Title placeholder -->
+    <rect x="170" y="90" width="250" height="20" fill="#ffffff" />
+    
+    <!-- Main content sections -->
+    <rect x="30" y="180" width="540" height="30" fill="#95a5a6" />
+    
+    <!-- Content boxes -->
+    <rect x="30" y="230" width="540" height="60" fill="#f1f1f1" />
+    <rect x="30" y="310" width="540" height="60" fill="#f1f1f1" />
+    <rect x="30" y="390" width="540" height="60" fill="#f1f1f1" />
+    
+    <!-- Second section -->
+    <rect x="30" y="480" width="540" height="30" fill="#95a5a6" />
+    
+    <!-- Content boxes -->
+    <rect x="30" y="530" width="540" height="60" fill="#f1f1f1" />
+    <rect x="30" y="610" width="540" height="60" fill="#f1f1f1" />
+    <rect x="30" y="690" width="540" height="60" fill="#f1f1f1" />
+    
+    <!-- Template name -->
+    <text x="30" y="780" font-family="Arial" font-size="16" font-weight="bold" fill="#34495e">CORPORATE TEMPLATE</text>
+  </svg>

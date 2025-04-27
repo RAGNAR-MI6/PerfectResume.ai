@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
@@ -9,7 +10,7 @@ const templates = [
     name: 'Professional',
     category: 'all',
     description: 'Clean and professional template suitable for most industries',
-    imagePlaceholder: 'Professional Template Preview',
+    image: '/images/templates/professional.jpg',
     popular: true,
   },
   {
@@ -17,7 +18,7 @@ const templates = [
     name: 'Modern',
     category: 'all',
     description: 'Contemporary design with a creative touch',
-    imagePlaceholder: 'Modern Template Preview',
+    image: '/images/templates/modern.jpg',
     popular: true,
   },
   {
@@ -25,7 +26,7 @@ const templates = [
     name: 'Executive',
     category: 'professional',
     description: 'Elegant design for senior management and executives',
-    imagePlaceholder: 'Executive Template Preview',
+    image: '/images/templates/executive.jpg',
     popular: false,
   },
   {
@@ -33,7 +34,7 @@ const templates = [
     name: 'Creative',
     category: 'creative',
     description: 'Bold design for creative professionals',
-    imagePlaceholder: 'Creative Template Preview',
+    image: '/images/templates/creative.jpg',
     popular: true,
   },
   {
@@ -41,7 +42,7 @@ const templates = [
     name: 'Technical',
     category: 'professional',
     description: 'Optimized for technical roles and skills',
-    imagePlaceholder: 'Technical Template Preview',
+    image: '/images/templates/technical.jpg',
     popular: false,
   },
   {
@@ -49,7 +50,7 @@ const templates = [
     name: 'Minimalist',
     category: 'all',
     description: 'Clean and simple design that focuses on content',
-    imagePlaceholder: 'Minimalist Template Preview',
+    image: '/images/templates/minimalist.jpg',
     popular: true,
   },
   {
@@ -57,7 +58,7 @@ const templates = [
     name: 'Academic',
     category: 'professional',
     description: 'Designed for academic and research positions',
-    imagePlaceholder: 'Academic Template Preview',
+    image: '/images/templates/academic.jpg',
     popular: false,
   },
   {
@@ -65,7 +66,7 @@ const templates = [
     name: 'Entry Level',
     category: 'simple',
     description: 'Perfect for students and recent graduates',
-    imagePlaceholder: 'Entry Level Template Preview',
+    image: '/images/templates/entry-level.jpg',
     popular: false,
   },
   {
@@ -73,7 +74,7 @@ const templates = [
     name: 'ATS Optimized',
     category: 'professional',
     description: 'Designed to pass through Applicant Tracking Systems',
-    imagePlaceholder: 'ATS Optimized Template Preview',
+    image: '/images/templates/ats-optimized.jpg',
     popular: true,
   },
 ];
@@ -131,15 +132,17 @@ export default function TemplatesPage() {
                 <div key={template.id} className="bg-white overflow-hidden shadow rounded-lg">
                   <div className="p-0">
                     <div className="h-48 bg-gray-200 flex items-center justify-center">
-                      <span className="text-gray-500">{template.imagePlaceholder}</span>
-                      {/* In a real implementation, use:
-                      <Image 
-                        src={`/images/templates/${template.id}.jpg`}
-                        alt={template.name}
-                        width={400}
-                        height={200}
-                        className="w-full h-full object-cover"
-                      /> */}
+                      {template.image ? (
+                        <Image 
+                          src={template.image}
+                          alt={template.name}
+                          width={400}
+                          height={200}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <span className="text-gray-500">Template Preview</span>
+                      )}
                     </div>
                   </div>
                   <div className="px-4 py-5 sm:p-6">
